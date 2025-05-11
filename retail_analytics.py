@@ -5,7 +5,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
 # Load dataset
-file_path = 'D:/datasets/OnlineRetail/Superstore.csv'
+file_path = '/Superstore.csv'
 df = pd.read_csv(file_path, encoding='ISO-8859-1')
 
 # Preprocessing
