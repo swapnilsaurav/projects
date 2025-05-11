@@ -1,0 +1,27 @@
+BUSINESS QUESTIONS & SOLUTIONS TO SOLVE USING PYTHON:
+Financial Trend & Budgeting
+1.	What are the monthly trends in spending and income across different departments?
+2.	Which departments are consistently overshooting their budgets based on transaction categories (e.g., travel, maintenance)?
+3.	What is the average monthly expenditure per account (e.g., Payroll, Operating, Investment)?
+________________________________________
+Cash Flow & Liquidity
+4.	What is the net cash flow (Credit - Debit) per month or quarter, and how does it vary by department or account?
+5.	Which categories contribute the most to cash outflow and inflow?
+6.	Is there any pattern of large withdrawals or deposits that indicate liquidity risk?
+________________________________________
+Performance Monitoring & Cost Control
+7.	Which transaction categories (e.g., Salary, Travel) are showing an upward or downward trend in expenses?
+8.	Who are the top approvers (managers) with the highest approval volume or highest expense total?
+9.	What percentage of total spend is attributed to non-operational categories like Maintenance, Travel, or Ad-hoc Expenses?
+________________________________________
+Fraud & Anomaly Detection
+10.	Are there any departments with unusual transaction frequencies or unusually high amounts?
+11.	Which transactions show abnormal amounts (e.g., > 2 standard deviations from the mean)?
+________________________________________
+Transaction Behavior & Forecasting
+12.	Can we forecast next month's spending based on historical patterns across categories?
+13.	How do credit and debit transactions vary over time across accounts or currencies?
+________________________________________
+Approvals & Policy Compliance
+14.	Are there specific approvers consistently approving high-amount transactions in specific departments?
+15.	What is the distribution of transaction types (Credit/Debit) by category and is it aligned with expected financial policy?
