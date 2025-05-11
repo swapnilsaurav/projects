@@ -1,0 +1,41 @@
+ASSIGNMENT 
+
+Objective:
+Students will design a simple relational database using MySQL, create three related tables, insert sample data, and answer queries based on the data.
+
+Instructions:
+1. Create a database named UniversityDB.
+2. Design three tables with proper relationships:
+
+Students (StudentID, Name, Age, DepartmentID)
+Departments (DepartmentID, DepartmentName)
+Courses (CourseID, CourseName, StudentID)
+
+3. Establish the relationships:
+a. A student belongs to one department (Foreign Key: DepartmentID in Students).
+b. A student can enroll in multiple courses (Foreign Key: StudentID in Courses).
+c. A department can have multiple students.
+
+4. Insert at least 5 records in each table.
+
+5. Query-Based Questions
+a. Retrieve all student details along with their department names.
+b. Find the names of all students who are enrolled in 'Artificial Intelligence'.
+c. Count how many students are in each department.
+d. List the courses taken by 'Alice Johnson'. (assuming Alice Johnson is a student)
+e. Find students who are enrolled in more than one course.
+f. Get the average age of students in each department.
+g. Find the department with the most students.
+h. List all students who are NOT enrolled in any course.
+i. Retrieve students along with the total number of courses they are enrolled in.
+j. Find students who belong to 'Computer Science' and are taking a course with 'Data' in its name.
+
+Submission Guidelines
+a. Submit a .sql file with all your queries.
+b. Ensure that each query runs without errors.
+c. Provide screenshots of executed queries with results.
+
+
+
+
+
