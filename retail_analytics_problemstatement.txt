@@ -1,0 +1,29 @@
+BUSINESS QUESTIONS & SOLUTIONS TO SOLVE USING PYTHON:
+Sales & Profitability Analysis
+1.	Which product categories and sub-categories generate the highest and lowest profit margins?
+2.	Which states or regions contribute most to overall sales and profits?
+3.	What is the impact of discounts on profit across different product categories?
+4.	Are there any products that consistently generate losses despite good sales volume?
+________________________________________
+ Operational & Shipping Analysis
+5.	What is the average delivery time (Ship Date - Order Date) by Ship Mode, and how does it impact customer segment satisfaction?
+6.	Which shipping modes are most frequently used, and how do they correlate with profit or loss?
+7.	How do sales and profits differ by shipping mode across regions?
+________________________________________
+Customer Behavior Analysis
+8.	Which customer segments (Consumer, Corporate, Home Office) have the highest average order value?
+9.	Who are the top 10 most profitable customers and what do they typically purchase?
+10.	Is there a correlation between repeat purchases (same Customer ID) and profit or discount given?
+________________________________________
+Time Series & Trend Analysis
+11.	How have sales, profit, and discount trends evolved over the years and months?
+12.	What are the peak sales periods (months/quarters), and how do they vary by region?
+________________________________________
+Product Performance & Inventory Insights
+13.	Which sub-categories have the highest sales-to-quantity ratio (indicating high value per unit sold)?
+14.	What are the most frequently ordered product combinations? (market basket analysis)
+________________________________________
+Predictive/Strategic Insights
+15.	Can we build a model to predict profit based on sales, discount, and quantity? What features influence profitability most?
+
+
