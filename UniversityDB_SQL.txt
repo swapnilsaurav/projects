@@ -1,0 +1,177 @@
+Create a database named UniversityDB.
+
+
+Design three tables with proper relationships:
+
+
+Students (StudentID, Name, Age, DepartmentID)
+Departments (DepartmentID, DepartmentName)
+Courses (CourseID, CourseName, StudentID)
+Establish the relationships:
+
+
+A student belongs to one department (Foreign Key: DepartmentID in Students).
+A student can enroll in multiple courses (Foreign Key: StudentID in Courses).
+A department can have multiple students.
+Insert at least 5 records in each table.
+
+
+Step 1: Create Tables
+sql
+
+CREATE DATABASE UniversityDB;
+USE UniversityDB;
+
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY AUTO_INCREMENT,
+    DepartmentName VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY AUTO_INCREMENT,
+    Name VARCHAR(100) NOT NULL,
+    Age INT NOT NULL,
+    DepartmentID INT,
+    FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+);
+
+CREATE TABLE Courses (
+    CourseID INT PRIMARY KEY AUTO_INCREMENT,
+    CourseName VARCHAR(100) NOT NULL,
+    StudentID INT,
+    FOREIGN KEY (StudentID) REFERENCES Students(StudentID)
+);
+
+
+Step 2: Insert Sample Data
+sql
+
+INSERT INTO Departments (DepartmentName) VALUES
+('Computer Science'),
+('Mechanical Engineering'),
+('Electrical Engineering');
+
+INSERT INTO Students (Name, Age, DepartmentID) VALUES
+('Alice Johnson', 21, 1),
+('Bob Smith', 22, 2),
+('Charlie Brown', 20, 1),
+('David White', 23, 3),
+('Emma Watson', 21, 2);
+
+INSERT INTO Courses (CourseName, StudentID) VALUES
+('Database Management', 1),
+('Operating Systems', 1),
+('Thermodynamics', 2),
+('Digital Circuits', 3),
+('Artificial Intelligence', 1),
+('Heat Transfer', 2),
+('Power Systems', 4),
+('Data Structures', 3),
+('Fluid Mechanics', 5),
+('Machine Learning', 1);
+
+
+Step 3: Query-Based Questions
+Retrieve all student details along with their department names.
+
+ sql
+
+SELECT Students.StudentID, Students.Name, Students.Age, Departments.DepartmentName 
+FROM Students 
+JOIN Departments ON Students.DepartmentID = Departments.DepartmentID;
+
+
+Find the names of all students who are enrolled in 'Artificial Intelligence'.
+
+ sql
+
+SELECT Students.Name 
+FROM Students 
+JOIN Courses ON Students.StudentID = Courses.StudentID 
+WHERE Courses.CourseName = 'Artificial Intelligence';
+
+
+Count how many students are in each department.
+
+ sql
+CopyEdit
+SELECT Departments.DepartmentName, COUNT(Students.StudentID) AS StudentCount 
+FROM Departments 
+LEFT JOIN Students ON Departments.DepartmentID = Students.DepartmentID 
+GROUP BY Departments.DepartmentName;
+
+
+List the courses taken by 'Alice Johnson'.
+
+ sql
+
+SELECT Courses.CourseName 
+FROM Courses 
+JOIN Students ON Courses.StudentID = Students.StudentID 
+WHERE Students.Name = 'Alice Johnson';
+
+
+Find students who are enrolled in more than one course.
+
+ sql
+
+SELECT Students.Name, COUNT(Courses.CourseID) AS CourseCount 
+FROM Students 
+JOIN Courses ON Students.StudentID = Courses.StudentID 
+GROUP BY Students.StudentID 
+HAVING CourseCount > 1;
+
+
+Get the average age of students in each department.
+
+ sql
+CopyEdit
+SELECT Departments.DepartmentName, AVG(Students.Age) AS AvgAge 
+FROM Departments 
+JOIN Students ON Departments.DepartmentID = Students.DepartmentID 
+GROUP BY Departments.DepartmentName;
+
+
+Find the department with the most students.
+
+ sql
+
+SELECT Departments.DepartmentName 
+FROM Departments 
+JOIN Students ON Departments.DepartmentID = Students.DepartmentID 
+GROUP BY Departments.DepartmentName 
+ORDER BY COUNT(Students.StudentID) DESC 
+LIMIT 1;
+
+
+List all students who are NOT enrolled in any course.
+
+ sql
+
+SELECT Students.Name 
+FROM Students 
+LEFT JOIN Courses ON Students.StudentID = Courses.StudentID 
+WHERE Courses.StudentID IS NULL;
+
+
+Retrieve students along with the total number of courses they are enrolled in.
+
+ sql
+CopyEdit
+SELECT Students.Name, COUNT(Courses.CourseID) AS TotalCourses 
+FROM Students 
+LEFT JOIN Courses ON Students.StudentID = Courses.StudentID 
+GROUP BY Students.StudentID;
+
+
+Find students who belong to 'Computer Science' and are taking a course with 'Data' in its name.
+
+
+sql
+
+SELECT Students.Name 
+FROM Students 
+JOIN Departments ON Students.DepartmentID = Departments.DepartmentID 
+JOIN Courses ON Students.StudentID = Courses.StudentID 
+WHERE Departments.DepartmentName = 'Computer Science' 
+AND Courses.CourseName LIKE '%Data%';
