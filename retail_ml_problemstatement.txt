@@ -1,0 +1,28 @@
+# THEME: RETAIL MANAGEMENT
+DATASET: Superstore.csv
+
+BUSINESS QUESTIONS TO SOLVE USING PYTHON:
+1. 🧠 Can we predict the profit of a transaction?
+Problem Type: Regression
+Features to use: Sales, Quantity, Discount, Category, Sub-Category, Segment
+Use case: Identify which factors impact profitability the most and forecast profit margins.
+________________________________________
+2. 📦 Which product categories are most likely to result in loss?
+Problem Type: Classification (Profit > 0 = Profitable, else = Loss)
+Features to use: Product, Sub-Category, Discount, Quantity, Region
+Use case: Help the business minimize risk by flagging unprofitable products.
+________________________________________
+3. 🏪 Can we cluster customers based on purchasing behavior?
+Problem Type: Clustering (Unsupervised Learning)
+Features to use: Total Spend, Average Discount, Quantity, Segment
+Use case: Design personalized marketing campaigns for different customer segments.
+________________________________________
+4. 🚛 Can we predict the best shipping mode for a customer order?
+Problem Type: Classification
+Features to use: Order Date, Region, Product Category, Quantity, Segment
+Use case: Optimize logistics by predicting preferred or most efficient shipping modes.
+________________________________________
+5. 📈 Can we forecast future sales based on historical order data?
+Problem Type: Time Series Forecasting
+Features to use: Date, Product Category, Region, Sales
+Use case: Enable inventory planning, marketing budget allocation, and revenue forecasting.
