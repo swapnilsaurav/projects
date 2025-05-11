@@ -15,3 +15,5 @@ Refer UniversityDB_SQL.txt for the solution
 
 # project4: Retail Analytics Machine Learning Project
 Superstore.csv is the file for this analytics
+retail_ml_problemstatement.txt  - contains the problem statements
+retail_ml.py - solution code in Python
