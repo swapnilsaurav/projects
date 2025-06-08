@@ -17,3 +17,8 @@ Refer UniversityDB_SQL.txt for the solution
 Superstore.csv is the file for this analytics
 retail_ml_problemstatement.txt  - contains the problem statements
 retail_ml.py - solution code in Python
+
+
+# project5: Analyze Employee resignation data and derive summary statistics + visuals
+Employee_Resignation_ProjectDataset.xlsx is the file for this analytics project
+
