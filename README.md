@@ -1,9 +1,9 @@
-# project1: retail analtics
+# project1: retail analytics
 Refer retail_analytics_problemstatement.txt  for the problem statement
 Superstore.csv is the file for this analytics
 Python code can be found at: retail_analytics.py
 
-# project2: Financial management analtics
+# project2: Financial management analytics
 Refer financial_analytics_problemstatement.txt  for the problem statement
 Financial_Management_Dataset.csv is the file for this analytics
 Python code can be found at: financial_analytics.py
