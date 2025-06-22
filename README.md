@@ -22,3 +22,11 @@ retail_ml.py - solution code in Python
 # project5: Analyze Employee resignation data and derive summary statistics + visuals
 Employee_Resignation_ProjectDataset.xlsx is the file for this analytics project
 
+# Numpy projects 
+Practice Basic Numpy Projects
+File name for details: Numpy 108
+
+# projects for Pandas Data Cleaning and EDA: Analyze various projects
+Practice Data Cleaning and EDA - one of the most important part of a data scientist's work
+File name for details: Pandas Data Cleaning Projects.dcx
+
